@@ -6,6 +6,7 @@ SECRET_KEY = os.environ['SECRET']
 
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
 CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']]
+
 DEBUG = False
 
 MIDDLEWARE = [
@@ -27,7 +28,7 @@ parameters = {pair.split('=')[0]:pair.split('=')[1] for pair in connection_strin
 
 DATABASES = {
     'default':{
-        'ENGINE':'django.db.backend.postgresql',
+        'ENGINE':'django.db.backends.postgresql',
         'NAME':parameters['dbname'],
         'HOST':parameters['host'],
         'USER':parameters['user'],
