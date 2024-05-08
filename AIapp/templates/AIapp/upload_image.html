@@ -65,7 +65,11 @@
 		<footer>
 			&copy; 2024 All rights reserved
 		</footer>
-		<script type="module" src="{% static 'js/index.js' %}"></script>		
+		<script type="module" src="{% static 'js/index.js' %}"></script>
+		<script>
+			window.azureWebsiteHostname = "{{ hostname }}";
+		</script>
+			
 	</body>
 
 </html>

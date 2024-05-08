@@ -85,5 +85,6 @@ def upload_image(request):
             #     'prompt':'stuff of a prompt',
             #     'description':'description: This excerpt appears to be from the novel "Arrow of God" by Chinua Achebe. In this scene, Ezeulu, a prominent character in the story, confronts someone who has offended him by implying that he is treating his own people poorly. Ezeulus response reflects his frustration and defiance, as well as his adherence to traditional customs and values. The use of the white clay, a symbol of purity and tradition, adds depth to the dialogue and showcases the cultural'
             # }
-            return JsonResponse(context)            
-    return render(request, 'AIapp/upload_image.html')
+            return JsonResponse(context)
+    websitename = os.environ['WEBSITE_HOSTNAME']          
+    return render(request, 'AIapp/upload_image.html', {'hostname':websitename})

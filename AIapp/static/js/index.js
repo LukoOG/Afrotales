@@ -43,10 +43,13 @@ document.getElementById("send-btn").addEventListener("click", () => {
   }
 })
 
+let url =`https://${window.azureWebsiteHostname}/upload_image/`
+console.log(url)
+
 async function fetchImage(file) {
   console.log('fetching')
   let res = await fetch(
-    'http://localhost:8000/upload_image/',{
+    url,{
         'method':'POST',
         'headers':{
           'X-CSRFToken':csrftoken,
