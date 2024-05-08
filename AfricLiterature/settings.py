@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'AIapp.apps.AiappConfig',
       'azure.storage.blob',
-      'rest_framework'
-      #'storages'
 ]
 
 MIDDLEWARE = [
