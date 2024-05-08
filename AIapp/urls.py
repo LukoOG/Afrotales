@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('upload_image/', views.upload_image, name='upload_image'),
+    path('', views.redirect_to_upload)
 ]

@@ -26,7 +26,8 @@ from azure.storage.blob import BlobServiceClient
  
 from .ai import *
 
-
+def redirect_to_upload(request):
+    return redirect('/upload_image/')
 
 def upload_image(request):
     if request.method == 'POST':
