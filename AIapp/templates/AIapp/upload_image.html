@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+		<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+		<title> Afrotales Capture</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Poppins:wght@400;700&display=swap"
+		rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	</head>
+
+	<body>
+		<header>
+			<img src="{% static 'img/narrator.jpg' %}" alt="MoviePitch">
+			<a href="/"><span>Afrotales</span> Capture</a>
+		</header>
+		<main>	
+			<!-- The Setup -->	
+			<section id="setup-container">
+				<div class="setup-inner">
+					<img src="{% static 'img/narrator.jpg' %}">
+					<div class="speech-bubble-ai" id="speech-bubble-ai">
+						<p id="movie-boss-text">
+							Give me an excerpt from your favourite literature book and a descriptive outline and watch me transform it into a magical image for you
+						</p>
+					</div>
+				</div>
+				<div class="setup-input-container" id="setup-input-container">
+					{% csrf_token %}
+					<div class='setup-inner'>
+						
+						<label for="setup-image" class="file-label">
+							Upload Image
+							<input type="file" name="image" id="setup-image" required>
+						</label>
+
+						<div class="select">
+							<label for='setup-choice' class="setup-label">Choose an outline</label>
+							<select id="setup-choice" class="select-dropdown">
+								<option value="character">Character</option>
+								<option value="event">Event</option>
+								<option value="object">Object</option>							
+							</select>
+						</div>
+						
+
+						<button class="send-btn" id="send-btn" aria-label="send">
+								<img src="{% static 'img/send-btn.png' %}" alt="send">
+						</button>
+					</div>
+					<p id="file-input"></p>							
+				  </div>
+				  
+			</section>	
+			<!-- The Output -->	
+			<section class="output-container" id="output-container">
+				<div id="output-img-container" class="output-img-container"></div>
+				<h1 id="output-title"></h1>
+				<h2 id="output-stars"></h2>
+				<p id="output-text"></p>
+			</section>
+		</main>	
+		<footer>
+			&copy; 2024 All rights reserved
+		</footer>
+		<script type="module" src="{% static 'js/index.js' %}"></script>		
+	</body>
+
+</html>
