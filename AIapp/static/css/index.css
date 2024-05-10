@@ -275,6 +275,29 @@ button:hover {
     box-shadow: 1px 1px 5px 1px var(--dark);
 }
 
+/* Styles for Note and About sections */
+.note-section, .about-section {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    padding: 10px;
+    border-style:solid;
+    border-radius: 10px;
+      max-width: 300px; /* Limit the maximum width of the bordered sections */
+word-wrap: break-word; /* Allow words to break onto the next line if they exceed the container width */
+}
+
+.note-section {
+    left: 20px;
+    background-color: #FFF8DC; /* Cream color */
+}
+
+.about-section {
+    right: 20px;
+    background-color: #FFF8DC; /* Cream color */
+}
+
+
 /* =================
       Footer 
      ================= */
