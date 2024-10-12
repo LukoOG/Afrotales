@@ -288,12 +288,12 @@ word-wrap: break-word; /* Allow words to break onto the next line if they exceed
 }
 
 .note-section {
-    left: 20px;
+    left: 20%;
     background-color: #FFF8DC; /* Cream color */
 }
 
 .about-section {
-    right: 20px;
+    right: 20%;
     background-color: #FFF8DC; /* Cream color */
 }
 
